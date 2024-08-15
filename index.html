@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>German Health-Tech</title>
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!--linkstyle-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  
+  <body>
+    <!--form login-->
+    <div class="login-container">
+      <div class="logo-icon-login">
+        <img src="assets/navbar-logo.png" />
+      </div>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <br/>
+      <div class="btn-lupapass">
+        <p1>Forget Password?</p1>
+      </div>
+      <button onclick="login()">Login</button>
+      <div class="message" id="message"></div>
+    </div>
+    <!--navbar-->
+    <nav class="hidden" id="main-content">
+      <div class="logo-icon">
+        <img src="assets/navbar-logo.png" />
+      </div>
+      <section class="nav-container">
+        <li><a href="#home" class="nav-item" style="vertical-align: middle"><span><b>HOME</b></span> </a></li>
+        <li><a href="#aboutus" class="nav-item" style="vertical-align: middle"><span><b>ABOUT US</b></span></a></li>
+        <li><a href="#calculator" class="nav-item" style="vertical-align: middle"><span><b>CALCULATE</b></span> </a></li>
+        <button class="logout-button" onclick="logout()">Logout</button>
+      </section>
+    </nav>
+    
+    <section class="section hidden" id="main-content">
+      <!--home-->
+      <section class="home" id="home">
+        <header>
+          <div>
+            <div class="cover-container">
+                <div class="cover">
+                  <h3>
+                    Welcome <span id="name"></span>,
+                  </h3>
+                  <p class="cover-text">
+                    <b>German Health-Tech</b> Together we are advancing Healthcare in Indonesia with more 120+ 
+                    health-tech startup member and 300+ activist. Our vision is to improve the quality of life of Indonesia people 
+                    through technology. We are doing Nurturing health-tech ecosystem Advocacy for health-tech regulatory Standardization 
+                    for health-tech In short, we are building digital ecosystem to make Indonesian healthcare better for everyone.
+                  </br>
+                </br>
+                    Technology can be found in nearly every aspect of life, from communication and transportation to <b>healthcare</b> 
+                    and entertainment. 
+                </br>
+              </br>
+                    Examples include computers, the internet, smartphones, and medical technologies like <b>BMI Calculator</b>. 
+                  </br>
+                  </p>
+                  <div class="selengkapnya">
+                    <p1>Baca Selengkapnya</p1>
+                </div>
+                </div>    
+                <div class="cover">
+                  <img class="image-cover" src="assets/cover-potrait.png">
+                </div>    
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <!-- Image Slider -->
+        <div class="title-autoslide">  
+          <h2>News & Events</h2>
+        </div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="assets/slide1.jpg" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="assets/slide2.jpg" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="assets/slide3.jpg" style="width:100%">
+          </div>
+        </div>
+        <br>
+          <div class="dot-container">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+          
+      <!--About Us-->
+  <section class="aboutus" id="aboutus">
+      <div class="cover">
+          <h2>   
+            Our Collaborators</br></br>
+          </h2>   
+      </div>
+  </section>
+      <section class="section">
+        <section class="aboutus1" id="aboutus1">
+          <div class="aboutus-list">
+            <div class="container-aboutus">
+              <div class="aboutus-img1">
+                <h4>120+ Health-Tech Startup Member</h4>
+                <img src="assets/imgabout1.jpg" />
+              </div>
+            </div>
+            <div class="container-aboutus">
+              <div class="aboutus-img2">
+                <h4>300+ Health-Tech Activist</h4>
+                <img src="assets/imgabout2.jpg" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+      <!--Calculator IBM-->
+    <section class="calculator" id="calculator"></section>
+      <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="text-container">
+          <p>Berat Badan ideal adalah impian semua orang, tidak hanya memiliki bentuk tubuh yang menunjang penampilan, 
+            berat badan juga menandakan kondisi tubuh yang sehat.
+            Bagaimana denganmu? Yuk, hitung sekarang di BMI Kalkulator</p>
+        </div>
+        <form id="bmi-form">
+            <fieldset>
+                <legend>Gender:</legend>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="Male" required>
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                    </label>
+                </div>
+            </fieldset>
+            <div class="input-group">
+                <label for="weight">Weight(kg):</label>
+                <input type="number" id="weight" required>
+            </div>
+            <div class="input-group">
+                <label for="age">Age(years):</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="input-group">
+                <label for="height">Height(cm):</label>
+                <input type="number" id="height" required>
+            </div>
+            <button type="submit">Calculate</button>
+            <button type="button" id="reset-btn">Reset</button>
+        </form>
+        <div id="result" class="result"></div>
+      </div>
+    </section>
+    
+    <!--footer-->
+    <section class="footer-container">
+    <footer class="footer hidden" id="main-content">
+      <p style="text-align: center">©2024 by gericaldrm</p>
+      <!-- Icon Sosmed -->
+      <div class="sosmed">
+        <a
+        href="https://www.linkedin.com/"
+        target="_blank">
+        <img src="assets/linkedin_logob.png" alt="linkedin" />
+        </a>
+        <a href="https://web.facebook.com/" target="_blank">
+          <img src="assets/facebook_logob.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="assets/instagram_logob.png" alt="Instagram" />
+        </a>
+        <a href="www.tiktok.com/" target="_blank">
+          <img src="assets/tiktok_logob.png" alt="Tiktok" />
+        </a>
+      </div>
+    </footer>
+  </section>
+  
+<!--button up/home-->
+  <button
+    onclick="topFunction()"
+    id="myBtn"
+    title="Go to top"
+    class="hidden"
+    id="main-content">
+    <img src="assets/logo chat.png" />
+  </button>
+  
+    <script src="js/script.js"></script>
+  </body>
+</html>
